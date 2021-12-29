@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.hide{
+    display: none;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 80%;
+    position: fixed;
+    top: 0;
+}
+
+.header{
+    background-color: #fff;
+}
+
+.header__banner{
+    display: flex;
+    padding-top: 25px;
+}
+
+.header__banner--logo{
+    flex: 1;
+    background-color: red;
+    padding: 8px;
+}
+
+.header__banner--head{
+    flex: 7;
+    text-align: center;
+    padding: 8px;
+}
+
+.header__taskbar{
+    background-color: rgb(39, 39, 236);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.header__taskbar ul{
+    display: flex;
+}
+
+.header__taskbar li{
+    color: white;
+    font-size: 18px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 8px 16px;
+}
+
+.header__taskbar li:hover {
+    color: #000;
+    background-color: white;
+    cursor: pointer;
+}
+
+.body{
+    display: flex;
+}
+
+.body__main{
+    flex: 4;
+}
+
+.body__taskbar{
+    flex: 1;
+}
+
+.body__taskbar--menu{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.body__taskbar--menu ul{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.body__taskbar--menu li:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.body__taskbar .add-btn{
+    font-size: 40px;
+    padding: 13px 23px;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 73px;
+    color: white;
+    background-color: rgb(54, 207, 40);
+    border: none;
+    transition: 0.25s;
+}
+
+.body__taskbar .menu-btn{
+    font-size: 40px;
+    padding: 13px 23px;
+    border-radius: 50%;
+    margin-top: 540px;
+    margin-left: 73px;
+    color: white;
+    background-color: rgb(54, 207, 40);
+    border: none;
+    transition: 0.25s;
+}
+
+.add-btn:hover,
+.menu-btn:hover{
+    background-color: rgb(163, 241, 152);
+    color: red;
+    transform: scale(1.1);
+}
+
+.content{
+    height: 100vh;
+    width: 80%;
+    margin-top: 136px;
+    display: flex;
+}
+.content-right{
+    flex: 1;
+}
+
+#content__main{
+    flex: 4;
+    padding: 0 20px;
+    margin-right: 10px;
+}
+
+#content__main li{
+    margin-bottom: 50px;
+}
+
+#content__main h2{
+    margin: 8px 0;
+    text-align: center;
+}
+
+#content__main img{
+    width: 100%;
+    height: auto;
+}
+
+#content__main p{
+    font-size: 20px;
+}
+
+.add-form{
+    position: fixed;
+    width: 64%;
+    height: 80vh;
+    background-color: #fff;
+    margin-top: -20px;
+}
+
+.add-form h3,
+.add-form p{
+    margin: 15px;
+}
+
+.content-input{
+    margin: 30px 10px;
+    display: flex;
+    border-bottom: 1px solid #000;
+    padding-bottom: 28px;
+}
+
+.content-input label{
+    flex: 1;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.content-input input,
+.content-input textarea{
+    flex: 3;
+    margin-right: 25px;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.add-form__btn{
+    text-align: right;
+}
+.add-form__btn button{
+    width: 100px;
+    margin-right: 50px;
+    padding: 8px 16px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.submit-btn{
+    background-color: green;
+}
+
+.reset-btn{
+    background-color: rgb(236, 22, 22);
+}
+
+.close-btn{
+    background-color: rgb(110, 105, 105);
+}
+
+.add-form__btn button:hover{
+    transform: scale(0.9);
+}
+
+.content-list{
+    background-color:#ccc;
+    position: fixed;
+    height: 100vh;
+    width: 16%;
+    margin-left: -10px;
+    margin-top: -20px;
+}
+
+.content-list__close{
+    text-align: right;
+}
+
+.list__close--btn{
+    padding: 4px 6px;
+    font-size: 20px;
+    border: none;
+    transition: 0.25s;
+}
+
+.list__close--btn:hover{
+    transform: scale(1.2);
+    color: white;
+    background-color: red;
+}
+
+#content-list__edit{
+    margin: 8px 4px;
+}
+
+#content-list__edit li{
+    display: flex;
+    padding: 4px 0;
+    border-bottom: 1px solid #000;
+}
+
+#content-list__edit span{
+    flex: 1;
+    margin: auto 0;
+}
+
+#content-list__edit p{
+    padding-left: 6px;
+    flex: 8;
+    width: 50px;
+    border-left: 1px solid #000;
+}
+
+#content-list__edit .del-btn{
+    flex: 2;
+    height: 21px;
+    margin: auto 0;
+    border: none;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+#content-list__edit .del-btn:hover{
+    background-color: red;
+    color: white;
+    transform: scale(1.2);
+}

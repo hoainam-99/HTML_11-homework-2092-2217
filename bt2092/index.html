@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>ĐĂNG NHẬP HỆ THỐNG</h2>
+        <div class="login">
+            <div class="login__img">
+                <img src="./assets/img/download.jpeg" alt="lock">
+            </div>
+            <form class="login__input" onsubmit="return showNotify()">
+                <div class="login__input--info">
+                    <label for="">Tài khoản</label>
+                    <input type="text" required placeholder="Enter account" id="account_id">
+                </div>
+                <div class="login__input--info">
+                    <label for="">Mật khẩu</label>
+                    <input type="password" required placeholder="Enter password" id="pwd_id">
+                </div>
+                <div class="login__input--btn">
+                    <button class="btn" type="submit">Đăng nhập</button>
+                    <button class="btn" type="reset">Nhập lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="notify hide">
+        <div class="notify__success">
+            <div class="notify--info">
+                <p>Đăng nhập thành công</p>
+            </div>
+            <div class="notify--btn">
+                <button class="ok-btn" onclick="hideNotify()">Ok</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/app.js"></script>
+</html>

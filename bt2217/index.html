@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web tin tức</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header__banner">
+                <div class="header__banner--logo">LOGO</div>
+                <div class="header__banner--head">WEB TIN TUC</div>
+            </div>
+            <div class="header__taskbar">
+                <ul>
+                    <li>
+                        <link rel="stylesheet" href="#">Trang chủ
+                    </li>
+                    <li>
+                        <link rel="stylesheet" href="">Tin Học
+                    </li>
+                    <li>
+                        <link rel="stylesheet" href="">Biểu Mẫu
+                    </li>
+                    <li>
+                        <link rel="stylesheet" href="">Khóa Học
+                    </li>
+                    <li>
+                        <link rel="stylesheet" href="">Tuyển Dụng
+                    </li>
+                    <li>
+                        <link rel="stylesheet" href="">Liên Hệ
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="body">
+            <div class="body__main">
+
+            </div>
+            <div class="body__taskbar">
+                <div class="body__taskbar--menu">
+                    <h3>Bài Viết Mới Nhất</h3>
+                    <ul id="add_id">
+                        
+                    </ul>
+                </div>
+                <button class="menu-btn" onclick="showList()">&#8801;</button>
+                <button class="add-btn" onclick="showForm()">+</button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <ul id="content__main">
+            
+        </ul>
+        <div class="add-form hide">
+            <h3>NHẬP THÔNG TIN BÀI VIẾT</h3>
+            <p>(Note: những thư mục đánh dấu (*) bắt buộc phải điền)</p>
+            <form action="" onsubmit="return addData()">
+                <div class="content-input">
+                    <label for="tieuDe_id">Tiêu Đề*</label>
+                    <input type="text" id="tieuDe_id" required name="" minlength="10" maxlength="2000">
+                </div>
+                <div class="content-input">
+                    <label for="img_id">Hình Ảnh</label>
+                    <input type="text" id="img_id" name="img" placeholder="Add image's link">
+                </div>
+                <div class="content-input">
+                    <label for="form-content_id">Nội Dung*</label>
+                    <textarea name="" id="form-content_id" cols="30" rows="5" minlength="10" maxlength="2000"></textarea>
+                </div>
+                <div class="add-form__btn">
+                    <button class="submit-btn" type="submit">Post</button>
+                    <button class="reset-btn" type="reset">Clear</button>
+                    <button class="close-btn" onclick="hideForm()">Close</button>
+                </div>
+            </form>
+        </div>
+        <div class="content-right">
+            <div class="content-list hide">
+                <div class="content-list__close">
+                    <button class="list__close--btn" onclick="hideList()">&#215;</button>
+                </div>
+                <ul id="content-list__edit">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/app.js"></script>
+</html>
