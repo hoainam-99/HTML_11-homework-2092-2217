@@ -41,27 +41,32 @@ function showData(){
         addTag.innerHTML += `<li>
             <a href="#bai${i}_id">Bài ${i+1}</a>
         </li>`
-        if(imgTag.value == ''){
+        if(docList[i].img != ''){
             mainTag.innerHTML += `<li id="bai${i}_id">
                 <h2>${docList[i].title}</h2>
+                <img src="${docList[i].img}" alt="ảnh minh họa">
                 <p>${docList[i].content}</p>
             </li>`
         }else{
-            mainTag.innerHTML += `<li>
+            mainTag.innerHTML += `<li id="bai${i}_id">
                 <h2>${docList[i].title}</h2>
-                <img src="${docList[i].img}" alt="ảnh minh họa">
                 <p>${docList[i].content}</p>
             </li>`
         }
         listTag.innerHTML += `<li>
             <span>${i+1}.</span>
             <p>${docList[i].title}</p>
-            <button class="del-btn" onclick="deleteData(${i})">Del</button>
-        </li>`
+                <div>
+                    <button class="edit-btn btn" onclick="editData(${i})">Edit</button><br>
+                    <button class="del-btn btn" onclick="deleteData(${i})">Del</button>
+                </div>
+            </li>`
     }
 }
 
 showData()
+
+var currentIndex = -1
 
 function saveLocalStorage(){
     var json = JSON.stringify(docList)
@@ -81,8 +86,13 @@ function addData(){
         'img' : imgTag.value,
         'content' : contentTag.value
     }
+    if(currentIndex >= 0){
+       docList[currentIndex] = doc
+       currentIndex = -1 
+    }else{
+        docList.push(doc)
+    }
 
-    docList.push(doc)
     saveLocalStorage()
     showData()
     titleTag.value = ''
@@ -99,4 +109,12 @@ function deleteData(index){
     docList.splice(index, 1)
     saveLocalStorage()
     showData()
+}
+
+function editData(index){
+    currentIndex = index
+    showFormTag.classList.remove('hide')
+    titleTag.value = docList[index].title
+    imgTag.value = docList[index].img
+    contentTag.value = docList[index].content
 }

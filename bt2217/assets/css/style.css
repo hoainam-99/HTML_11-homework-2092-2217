@@ -148,10 +148,12 @@ body{
 
 #content__main li{
     margin-bottom: 50px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
 }
 
 #content__main h2{
-    margin: 8px 0;
+    margin: 16px 0;
     text-align: center;
 }
 
@@ -277,17 +279,25 @@ body{
     border-left: 1px solid #000;
 }
 
-#content-list__edit .del-btn{
+#content-list__edit .btn{
     flex: 2;
     height: 21px;
-    margin: auto 0;
+    margin: 4px 0;
     border: none;
     border-radius: 5px;
     transition: 0.25s;
+    width: 30px;
 }
 
 #content-list__edit .del-btn:hover{
     background-color: red;
     color: white;
     transform: scale(1.2);
+}
+
+#content-list__edit .edit-btn:hover{
+    background-color: green;
+    color: white;
+    transform: scale(1.2);
+
 }
